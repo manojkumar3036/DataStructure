@@ -15,7 +15,7 @@ class Node{
 	* next contains the address of the next node
 	*/
 	int data;
-	int next;
+	Node next;
 
 	/*
 	* constructor initalizing data and next to null
