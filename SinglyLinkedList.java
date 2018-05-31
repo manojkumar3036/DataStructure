@@ -52,7 +52,24 @@ public class SinglyLinkedList{
 	}
 
 	// method for inserting a node at the end of the list
-	public void insertAtEnd(){
+	public void insertAtEnd(int data){
+		Node obj1=new Node(data,null);
+		size++;
+		/*
+		* if start is null then assign the node to the start and end to the start.
+		* if not then assign the end to the newly created node 
+		* assign the end to the newly created node 
+		*/
+		if(start==null){
+			start=obj1;
+			end=start;
+			
+		}
+		else {
+			end.setNext(obj1);
+			end=obj1;
+		}
+	
 
 	}
 
@@ -76,10 +93,10 @@ public class SinglyLinkedList{
 		// assing the start to the another variable of node type
 
 		Node ptr=start.getNext();
-		System.out.print(start.getData() +"->");
+		System.out.print(start.getData() +",");
 
 		while(ptr.getNext()!=null){
-			System.out.print(ptr.getData()+"->");
+			System.out.print(ptr.getData()+",");
 			ptr=ptr.getNext();
 		}
 
